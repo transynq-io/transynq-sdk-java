@@ -113,7 +113,7 @@ mavenPublishing {
         name.set("Transynq Java SDK")
         description.set(project.description)
         inceptionYear.set("2026")
-        url.set("https://github.com/qadir0108/transynq-sdk-java")
+        url.set("https://github.com/transynq-io/transynq-sdk-java")
         organization {
             name.set("Transynq")
             url.set("https://transynq.io")
@@ -135,17 +135,17 @@ mavenPublishing {
             }
         }
         scm {
-            url.set("https://github.com/qadir0108/transynq-sdk-java")
-            connection.set("scm:git:https://github.com/qadir0108/transynq-sdk-java.git")
-            developerConnection.set("scm:git:ssh://git@github.com/qadir0108/transynq-sdk-java.git")
+            url.set("https://github.com/transynq-io/transynq-sdk-java")
+            connection.set("scm:git:https://github.com/transynq-io/transynq-sdk-java.git")
+            developerConnection.set("scm:git:ssh://git@github.com/transynq-io/transynq-sdk-java.git")
         }
         issueManagement {
             system.set("GitHub")
-            url.set("https://github.com/qadir0108/transynq-sdk-java/issues")
+            url.set("https://github.com/transynq-io/transynq-sdk-java/issues")
         }
         ciManagement {
             system.set("GitHub Actions")
-            url.set("https://github.com/qadir0108/transynq-sdk-java/actions")
+            url.set("https://github.com/transynq-io/transynq-sdk-java/actions")
         }
     }
 }

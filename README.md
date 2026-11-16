@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Transynq - Intelligent Transport Operations" src="https://raw.githubusercontent.com/qadir0108/transynq-sdk-java/main/assets/brand/transynq-readme-banner.png" width="720">
+  <img alt="Transynq - Intelligent Transport Operations" src="https://raw.githubusercontent.com/transynq-io/transynq-sdk-java/main/assets/brand/transynq-readme-banner.png" width="720">
 </p>
 
 <h1 align="center">Java SDK for the Transynq TMS API</h1>
@@ -7,13 +7,13 @@
 <p align="center"><em>Intelligent Transport Operations</em></p>
 
 <p align="center">
-  <a href="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/ci.yml/badge.svg?branch=main"></a>
-  <a href="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/release.yml"><img alt="Release" src="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/release.yml/badge.svg"></a>
+  <a href="https://github.com/transynq-io/transynq-sdk-java/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/transynq-io/transynq-sdk-java/actions/workflows/ci.yml/badge.svg?branch=main"></a>
+  <a href="https://github.com/transynq-io/transynq-sdk-java/actions/workflows/release.yml"><img alt="Release" src="https://github.com/transynq-io/transynq-sdk-java/actions/workflows/release.yml/badge.svg"></a>
   <a href="https://central.sonatype.com/artifact/io.transynq/transynq-sdk"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.transynq/transynq-sdk?logo=apachemaven&color=2563EB"></a>
   <a href="https://javadoc.io/doc/io.transynq/transynq-sdk"><img alt="Javadoc" src="https://javadoc.io/badge2/io.transynq/transynq-sdk/javadoc.svg?color=06B6D4"></a>
   <img alt="Runtime" src="https://img.shields.io/badge/java-17%2B-ED8B00?logo=openjdk&logoColor=white">
-  <a href="https://github.com/qadir0108/transynq-sdk-java/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-8B5CF6"></a>
-  <a href="https://github.com/qadir0108/transynq-sdk-java/tree/main/docs/"><img alt="Docs" src="https://img.shields.io/badge/docs-guides-2563EB"></a>
+  <a href="https://github.com/transynq-io/transynq-sdk-java/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-8B5CF6"></a>
+  <a href="https://github.com/transynq-io/transynq-sdk-java/tree/main/docs/"><img alt="Docs" src="https://img.shields.io/badge/docs-guides-2563EB"></a>
   <img alt="API operations" src="https://img.shields.io/badge/API%20operations-705-0B1220">
 </p>
 
@@ -23,7 +23,7 @@ optimistic concurrency, file transfer and long-running operations handled for yo
 
 - Package: `io.transynq:transynq-sdk` - version 1.0.1 (semantic versioning, independent of the API version)
 - Generated from the Transynq API OpenAPI 3.1 contract v1.0.0 plus a hand-written core
-- Licence: [MIT](https://github.com/qadir0108/transynq-sdk-java/blob/main/LICENSE)
+- Licence: [MIT](https://github.com/transynq-io/transynq-sdk-java/blob/main/LICENSE)
 
 ## Requirements
 
@@ -84,28 +84,28 @@ TransynqClient client = new TransynqClient(TransynqClientOptions.builder("https:
 System.out.println(client.authentication().getApiClient().data().json());   // {"companyId":..., "description":...}
 ```
 
-See [docs/authentication.md](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/authentication.md) for sessions, CSRF and driver tokens.
+See [docs/authentication.md](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/authentication.md) for sessions, CSRF and driver tokens.
 
 ## Documentation
 
-- [Getting started](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/getting-started.md)
-- [Authentication](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/authentication.md)
-- [Configuration](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/configuration.md)
-- [Error handling](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/error-handling.md)
-- [Pagination and grid queries](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/pagination.md)
-- [Concurrency (ETag / If-Match)](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/concurrency.md)
-- [Idempotency](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/idempotency.md)
-- [Long-running operations](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/long-running-operations.md)
-- [File upload and download](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/files.md)
-- [Logging and observability](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/logging-and-observability.md)
-- [Dates, money and enums (type mapping)](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/types.md)
-- [Testing your integration](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/testing.md)
-- [Versioning and compatibility](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/versioning.md)
-- [Troubleshooting and FAQ](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/troubleshooting.md)
-- [Resource index (every operation, generated)](https://github.com/qadir0108/transynq-sdk-java/blob/main/docs/resources/README.md)
+- [Getting started](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/getting-started.md)
+- [Authentication](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/authentication.md)
+- [Configuration](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/configuration.md)
+- [Error handling](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/error-handling.md)
+- [Pagination and grid queries](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/pagination.md)
+- [Concurrency (ETag / If-Match)](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/concurrency.md)
+- [Idempotency](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/idempotency.md)
+- [Long-running operations](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/long-running-operations.md)
+- [File upload and download](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/files.md)
+- [Logging and observability](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/logging-and-observability.md)
+- [Dates, money and enums (type mapping)](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/types.md)
+- [Testing your integration](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/testing.md)
+- [Versioning and compatibility](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/versioning.md)
+- [Troubleshooting and FAQ](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/troubleshooting.md)
+- [Resource index (every operation, generated)](https://github.com/transynq-io/transynq-sdk-java/blob/main/docs/resources/README.md)
 
 Runnable samples of real flows (sign in, list and page grid rows, create a booking idempotently, update with If-Match, list
-invoices, upload a POD, wait on a long operation) are in [`examples/src/main/java/io/transynq/sdk/examples/Flows.java`](https://github.com/qadir0108/transynq-sdk-java/blob/main/examples/src/main/java/io/transynq/sdk/examples/Flows.java).
+invoices, upload a POD, wait on a long operation) are in [`examples/src/main/java/io/transynq/sdk/examples/Flows.java`](https://github.com/transynq-io/transynq-sdk-java/blob/main/examples/src/main/java/io/transynq/sdk/examples/Flows.java).
 
 The API reference is the Javadoc of the library:
 
@@ -115,16 +115,16 @@ The API reference is the Javadoc of the library:
 
 ## Support
 
-- Bugs and feature requests: [GitHub issues](https://github.com/qadir0108/transynq-sdk-java/issues) (use the templates; never paste real keys, passwords or customer data).
-- Security problems: see [SECURITY.md](https://github.com/qadir0108/transynq-sdk-java/blob/main/SECURITY.md) - do not open a public issue.
+- Bugs and feature requests: [GitHub issues](https://github.com/transynq-io/transynq-sdk-java/issues) (use the templates; never paste real keys, passwords or customer data).
+- Security problems: see [SECURITY.md](https://github.com/transynq-io/transynq-sdk-java/blob/main/SECURITY.md) - do not open a public issue.
 - When the API answers with an error, quote its correlation id (`correlationId` on the error).
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/qadir0108/transynq-sdk-java/blob/main/CONTRIBUTING.md) and the [code of conduct](https://github.com/qadir0108/transynq-sdk-java/blob/main/CODE_OF_CONDUCT.md).
+See [CONTRIBUTING.md](https://github.com/transynq-io/transynq-sdk-java/blob/main/CONTRIBUTING.md) and the [code of conduct](https://github.com/transynq-io/transynq-sdk-java/blob/main/CODE_OF_CONDUCT.md).
 
 ## Licence
 
-[MIT](https://github.com/qadir0108/transynq-sdk-java/blob/main/LICENSE) - Copyright (c) 2026 Transynq.
+[MIT](https://github.com/transynq-io/transynq-sdk-java/blob/main/LICENSE) - Copyright (c) 2026 Transynq.
 
 The Transynq name and logos are trademarks of Transynq and are not covered by the MIT licence; you may use them only to refer to Transynq.

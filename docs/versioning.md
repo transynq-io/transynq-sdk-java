@@ -9,4 +9,4 @@
 - Models ignore unknown properties and codes are open strings, so an older SDK keeps working against a newer API v1.
 - Supported runtimes: Java 17 or later, with Jackson 2.17 (`jackson-databind`, `jackson-datatype-jsr310`).
 
-See the [changelog](https://github.com/qadir0108/transynq-sdk-java/blob/main/CHANGELOG.md) for the changes of each release.
+See the [changelog](https://github.com/transynq-io/transynq-sdk-java/blob/main/CHANGELOG.md) for the changes of each release.
