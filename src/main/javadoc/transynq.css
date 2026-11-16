@@ -1,0 +1,104 @@
+/* Transynq brand stylesheet added to the standard Javadoc stylesheet (--add-stylesheet). */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
+
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #1F2937;
+    background-color: #FFFFFF;
+}
+
+code, pre, tt, .member-signature, .type-signature {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+a:link, a:visited {
+    color: #2563EB;
+}
+
+a:hover, a:focus {
+    color: #8B5CF6;
+}
+
+.top-nav, .bottom-nav {
+    background-color: #0B1220;
+    color: #F8FAFC;
+    border-bottom: 3px solid #2563EB;
+}
+
+.top-nav a:link, .top-nav a:visited, .bottom-nav a:link, .bottom-nav a:visited {
+    color: #F8FAFC;
+}
+
+.sub-nav {
+    background-color: #F8FAFC;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.nav-bar-cell1-rev {
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+
+.about-language {
+    color: #F8FAFC;
+    font-weight: 600;
+}
+
+.about-language img {
+    vertical-align: middle;
+    margin-right: 6px;
+    border-radius: 4px;
+}
+
+.title, h1, h2, h3, h4 {
+    color: #0B1220;
+    font-weight: 600;
+}
+
+.caption span, .table-tabs button.active-table-tab, .table-tabs .active-table-tab {
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+
+.table-tabs button {
+    background-color: #E5E7EB;
+}
+
+.col-first, .col-second, .col-constructor-name, .col-last {
+    border-color: #E5E7EB;
+}
+
+.even-row-color, .even-row-color .col-last {
+    background-color: #FFFFFF;
+}
+
+.odd-row-color, .odd-row-color .col-last {
+    background-color: #F8FAFC;
+}
+
+.legal-copy {
+    color: #6B7280;
+    font-family: "Inter", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    body, .sub-nav, .even-row-color, .even-row-color .col-last, .odd-row-color, .odd-row-color .col-last {
+        background-color: #0B1220;
+        color: #E5E7EB;
+    }
+    .odd-row-color, .odd-row-color .col-last, .sub-nav {
+        background-color: #1F2937;
+    }
+    .title, h1, h2, h3, h4 {
+        color: #F8FAFC;
+    }
+    a:link, a:visited {
+        color: #60A5FA;
+    }
+    a:hover, a:focus {
+        color: #A78BFA;
+    }
+    .block, .member-signature, pre, code {
+        color: #E5E7EB;
+    }
+}

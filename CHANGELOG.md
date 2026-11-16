@@ -5,6 +5,10 @@ and the project uses [semantic versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Transynq branding for README, docs and package metadata.
+
 ## [1.0.0] - not yet released
 
 ### Added

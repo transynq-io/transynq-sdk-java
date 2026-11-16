@@ -51,8 +51,19 @@ tasks.withType<Javadoc>().configureEach {
         encoding = "UTF-8"
         addStringOption("Xdoclint:all,-missing", "-quiet")
         windowTitle = "Transynq Java SDK ${project.version}"
+        docTitle = "Transynq Java SDK ${project.version}"
+        header = "<img src=\"{@docRoot}/resources/brand/transynq-icon-32.png\" alt=\"Transynq\" width=\"20\" height=\"20\"> Transynq TMS"
+        bottom = "&copy; 2026 Transynq &middot; MIT licence &middot; Intelligent Transport Operations"
+        addFileOption("-add-stylesheet", file("src/main/javadoc/transynq.css"))
     }
     isFailOnError = true
+    doLast {
+        // the header logo: the brand file itself, copied next to the generated pages
+        copy {
+            from("assets/brand/transynq-icon-32.png")
+            into(destinationDir!!.resolve("resources/brand"))
+        }
+    }
 }
 
 tasks.test {
@@ -89,6 +100,10 @@ publishing {
                 name.set("Transynq SDK")
                 description.set(project.description)
                 url.set("https://github.com/qadir0108/transynq-sdk-java")
+                organization {
+                    name.set("Transynq")
+                    url.set("https://github.com/qadir0108/transynq-sdk-java")
+                }
                 licenses {
                     license {
                         name.set("MIT License")
