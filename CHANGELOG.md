@@ -5,15 +5,7 @@ and the project uses [semantic versioning](https://semver.org/).
 
 ## [Unreleased]
 
-### Changed
-
-- Maven coordinates and Java packages are now `io.transynq` (`io.transynq:transynq-sdk`, packages `io.transynq.sdk...`).
-
-### Added
-
-- Transynq branding for README, docs and package metadata.
-
-## [1.0.0] - not yet released
+## [1.0.0] - 2026-11-16
 
 ### Added
 
@@ -24,3 +16,8 @@ and the project uses [semantic versioning](https://semver.org/).
 - ETag / If-Match helpers, idempotent creates by client id, `Idempotency-Key`.
 - Auto-paging, grid row iteration, long-running operation poller, multipart uploads and streamed downloads.
 - Request/response hooks with secret redaction, correlation ids and `X-Api-Version` on every response.
+- Maven coordinates `io.transynq:transynq-sdk`, Java packages `io.transynq.sdk...`; requires Java 17 or later.
+- Transynq branding for README, docs and package metadata.
+
+[Unreleased]: https://github.com/qadir0108/transynq-sdk-java/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/qadir0108/transynq-sdk-java/releases/tag/v1.0.0
