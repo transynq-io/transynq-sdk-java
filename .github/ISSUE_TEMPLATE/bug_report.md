@@ -5,7 +5,7 @@ labels: bug
 ---
 
 **SDK version and runtime**
-<!-- e.g. com.transynq:transynq-sdk 1.0.0 on Java 17 -->
+<!-- e.g. io.transynq:transynq-sdk 1.0.0 on Java 17 -->
 
 **What happened**
 

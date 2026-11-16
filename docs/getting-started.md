@@ -5,13 +5,13 @@
 ```xml
 <!-- Maven -->
 <dependency>
-  <groupId>com.transynq</groupId>
+  <groupId>io.transynq</groupId>
   <artifactId>transynq-sdk</artifactId>
   <version>1.0.0</version>
 </dependency>
 
 // Gradle (Kotlin DSL)
-implementation("com.transynq:transynq-sdk:1.0.0")
+implementation("io.transynq:transynq-sdk:1.0.0")
 ```
 
 ## 2. Get a credential
@@ -23,11 +23,11 @@ secret store.
 ## 3. Make a first call
 
 ```java
-import com.transynq.sdk.ApiResponse;
-import com.transynq.sdk.TransynqClient;
-import com.transynq.sdk.TransynqClientOptions;
-import com.transynq.sdk.credentials.ApiKeyCredential;
-import com.transynq.sdk.models.CountryResponse;
+import io.transynq.sdk.ApiResponse;
+import io.transynq.sdk.TransynqClient;
+import io.transynq.sdk.TransynqClientOptions;
+import io.transynq.sdk.credentials.ApiKeyCredential;
+import io.transynq.sdk.models.CountryResponse;
 import java.util.List;
 
 TransynqClient client = new TransynqClient(TransynqClientOptions.builder("https://api.example.com")
@@ -53,4 +53,4 @@ One accessor per OpenAPI tag (`client.jobs()`, `client.referenceData()`, `client
 - [Authentication](authentication.md) - sessions, CSRF and driver tokens.
 - [Error handling](error-handling.md) - typed errors and correlation ids.
 - [Pagination](pagination.md), [Concurrency](concurrency.md), [Idempotency](idempotency.md), [Long-running operations](long-running-operations.md).
-- The runnable samples in `examples/src/main/java/com/transynq/sdk/examples/Flows.java` (`./gradlew runExample --args=sign-in`).
+- The runnable samples in `examples/src/main/java/io/transynq/sdk/examples/Flows.java` (`./gradlew runExample --args=sign-in`).

@@ -5,6 +5,10 @@ and the project uses [semantic versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- Maven coordinates and Java packages are now `io.transynq` (`io.transynq:transynq-sdk`, packages `io.transynq.sdk...`).
+
 ### Added
 
 - Transynq branding for README, docs and package metadata.

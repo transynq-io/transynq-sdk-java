@@ -1,20 +1,26 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/qadir0108/transynq-sdk-java/main/assets/brand/transynq-logo-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/qadir0108/transynq-sdk-java/main/assets/brand/transynq-logo-light.png">
-    <img alt="Transynq" src="https://raw.githubusercontent.com/qadir0108/transynq-sdk-java/main/assets/brand/transynq-logo-light.png" width="360">
-  </picture>
+  <img alt="Transynq - Intelligent Transport Operations" src="https://raw.githubusercontent.com/qadir0108/transynq-sdk-java/main/assets/brand/transynq-readme-banner.png" width="720">
 </p>
 
 <h1 align="center">Java SDK for the Transynq TMS API</h1>
 
 <p align="center"><em>Intelligent Transport Operations</em></p>
 
+<p align="center">
+  <a href="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/ci.yml/badge.svg?branch=main"></a>
+  <a href="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/release.yml"><img alt="Release" src="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/release.yml/badge.svg"></a>
+  <a href="https://central.sonatype.com/artifact/io.transynq/transynq-sdk"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.transynq/transynq-sdk?logo=apachemaven&color=2563EB"></a>
+  <img alt="Runtime" src="https://img.shields.io/badge/java-17%2B-ED8B00?logo=openjdk&logoColor=white">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-8B5CF6"></a>
+  <a href="docs/"><img alt="Docs" src="https://img.shields.io/badge/docs-guides-2563EB"></a>
+  <img alt="API operations" src="https://img.shields.io/badge/API%20operations-705-0B1220">
+</p>
+
 The official Java client for **Transynq TMS** (`/api/v1`): all 705 operations of the API, grouped by area (jobs,
 bookings, dispatch, invoicing, customers, driver app...), with typed models, authentication, retries, typed errors, paging,
 optimistic concurrency, file transfer and long-running operations handled for you.
 
-- Package: `com.transynq:transynq-sdk` - version 1.0.0 (semantic versioning, independent of the API version)
+- Package: `io.transynq:transynq-sdk` - version 1.0.0 (semantic versioning, independent of the API version)
 - Generated from the Transynq API OpenAPI 3.1 contract v1.0.0 plus a hand-written core
 - Licence: [MIT](LICENSE)
 
@@ -28,23 +34,23 @@ optimistic concurrency, file transfer and long-running operations handled for yo
 ```xml
 <!-- Maven -->
 <dependency>
-  <groupId>com.transynq</groupId>
+  <groupId>io.transynq</groupId>
   <artifactId>transynq-sdk</artifactId>
   <version>1.0.0</version>
 </dependency>
 
 // Gradle (Kotlin DSL)
-implementation("com.transynq:transynq-sdk:1.0.0")
+implementation("io.transynq:transynq-sdk:1.0.0")
 ```
 
 ## Quick start
 
 ```java
-import com.transynq.sdk.ApiResponse;
-import com.transynq.sdk.TransynqClient;
-import com.transynq.sdk.TransynqClientOptions;
-import com.transynq.sdk.credentials.ApiKeyCredential;
-import com.transynq.sdk.models.CountryResponse;
+import io.transynq.sdk.ApiResponse;
+import io.transynq.sdk.TransynqClient;
+import io.transynq.sdk.TransynqClientOptions;
+import io.transynq.sdk.credentials.ApiKeyCredential;
+import io.transynq.sdk.models.CountryResponse;
 import java.util.List;
 
 TransynqClient client = new TransynqClient(TransynqClientOptions.builder("https://api.example.com")
@@ -98,7 +104,7 @@ See [docs/authentication.md](docs/authentication.md) for sessions, CSRF and driv
 - [Resource index (every operation, generated)](docs/resources/README.md)
 
 Runnable samples of real flows (sign in, list and page grid rows, create a booking idempotently, update with If-Match, list
-invoices, upload a POD, wait on a long operation) are in [`examples/src/main/java/com/transynq/sdk/examples/Flows.java`](examples/src/main/java/com/transynq/sdk/examples/Flows.java).
+invoices, upload a POD, wait on a long operation) are in [`examples/src/main/java/io/transynq/sdk/examples/Flows.java`](examples/src/main/java/io/transynq/sdk/examples/Flows.java).
 
 The API reference is the Javadoc of the library:
 

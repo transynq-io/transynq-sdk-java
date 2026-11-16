@@ -17,7 +17,7 @@ Every non-2xx answer becomes a typed error built from the API's ProblemDetails b
 | other 4xx | as sent | `ApiException` |
 | no answer | - | `TransynqConnectionException` / `TransynqTimeoutException` |
 
-Every `ApiException` exposes `status()`, `code()`, `title()`, `detail()`, `type()`, `correlationId()`, `rawBody()`, `headers()` and `operationId()`. All SDK exceptions extend the unchecked `TransynqException` (package `com.transynq.sdk.errors`); a failed long operation throws `LongOperationFailedException` (`operation()`). The `...Async` methods complete exceptionally with the same exceptions (wrapped in `CompletionException`).
+Every `ApiException` exposes `status()`, `code()`, `title()`, `detail()`, `type()`, `correlationId()`, `rawBody()`, `headers()` and `operationId()`. All SDK exceptions extend the unchecked `TransynqException` (package `io.transynq.sdk.errors`); a failed long operation throws `LongOperationFailedException` (`operation()`). The `...Async` methods complete exceptionally with the same exceptions (wrapped in `CompletionException`).
 
 ```java
 try {

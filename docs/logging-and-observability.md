@@ -1,7 +1,7 @@
 # Logging and observability
 
 ```java
-// debug lines go to System.Logger "com.transynq.sdk" (bridged to SLF4J/Log4j/JUL by your logging setup)
+// debug lines go to System.Logger "io.transynq.sdk" (bridged to SLF4J/Log4j/JUL by your logging setup)
 TransynqClient client = new TransynqClient(TransynqClientOptions.builder("https://api.example.com")
         .credential(new ApiKeyCredential(apiKey))
         .onRequest(info -> System.out.println("-> " + info.method() + " " + info.operationId() + " #" + info.attempt()))

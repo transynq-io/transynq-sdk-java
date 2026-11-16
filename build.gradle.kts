@@ -1,19 +1,20 @@
+import com.vanniktech.maven.publish.JavaLibrary
+import com.vanniktech.maven.publish.JavadocJar
+import com.vanniktech.maven.publish.SonatypeHost
+
 plugins {
     `java-library`
-    `maven-publish`
+    signing
+    // Maven Central (Central Portal) publishing: sources + javadoc jars, POM, signing
+    id("com.vanniktech.maven.publish") version "0.30.0"
 }
 
-group = "com.transynq"
+group = "io.transynq"
 version = "1.0.0"
 description = "Official Java client for the Transynq TMS API"
 
 repositories {
     mavenCentral()
-}
-
-java {
-    withSourcesJar()
-    withJavadocJar()
 }
 
 sourceSets {
@@ -78,7 +79,7 @@ tasks.register<JavaExec>("runExample") {
     description = "Runs an example flow: ./gradlew runExample --args=sign-in"
     group = "application"
     classpath = sourceSets["examples"].runtimeClasspath
-    mainClass.set("com.transynq.sdk.examples.Flows")
+    mainClass.set("io.transynq.sdk.examples.Flows")
 }
 
 tasks.named("check") {
@@ -91,36 +92,60 @@ tasks.jar {
     }
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            artifactId = "transynq-sdk"
-            from(components["java"])
-            pom {
-                name.set("Transynq SDK")
-                description.set(project.description)
-                url.set("https://github.com/qadir0108/transynq-sdk-java")
-                organization {
-                    name.set("Transynq")
-                    url.set("https://github.com/qadir0108/transynq-sdk-java")
-                }
-                licenses {
-                    license {
-                        name.set("MIT License")
-                        url.set("https://opensource.org/licenses/MIT")
-                    }
-                }
-                scm {
-                    url.set("https://github.com/qadir0108/transynq-sdk-java")
-                    connection.set("scm:git:https://github.com/qadir0108/transynq-sdk-java.git")
-                    developerConnection.set("scm:git:ssh://git@github.com/qadir0108/transynq-sdk-java.git")
-                }
-                developers {
-                    developer {
-                        name.set("Transynq")
-                    }
-                }
+// Signing: an ASCII-armoured private key in memory, only when one is supplied (release workflow).
+// Local and CI builds without SIGNING_KEY skip signing, so `./gradlew build` and `publishToMavenLocal` need no secrets.
+val signingKey: String? = providers.environmentVariable("SIGNING_KEY").orNull
+    ?: providers.gradleProperty("signingInMemoryKey").orNull
+val signingPassword: String? = providers.environmentVariable("SIGNING_PASSWORD").orNull
+    ?: providers.gradleProperty("signingInMemoryKeyPassword").orNull
+
+mavenPublishing {
+    // credentials: gradle properties mavenCentralUsername / mavenCentralPassword
+    // (ORG_GRADLE_PROJECT_mavenCentralUsername / ..Password in the release workflow, from the Central Portal user token)
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, automaticRelease = true)
+    if (!signingKey.isNullOrBlank()) {
+        signAllPublications()
+    }
+    coordinates("io.transynq", "transynq-sdk", version.toString())
+    configure(JavaLibrary(javadocJar = JavadocJar.Javadoc(), sourcesJar = true))
+
+    pom {
+        name.set("Transynq SDK")
+        description.set(project.description)
+        inceptionYear.set("2026")
+        url.set("https://github.com/qadir0108/transynq-sdk-java")
+        organization {
+            name.set("Transynq")
+            url.set("https://github.com/qadir0108/transynq-sdk-java")
+        }
+        licenses {
+            license {
+                name.set("MIT License")
+                url.set("https://opensource.org/licenses/MIT")
+                distribution.set("repo")
             }
         }
+        developers {
+            developer {
+                id.set("transynq")
+                name.set("Transynq")
+                url.set("https://github.com/qadir0108")
+            }
+        }
+        scm {
+            url.set("https://github.com/qadir0108/transynq-sdk-java")
+            connection.set("scm:git:https://github.com/qadir0108/transynq-sdk-java.git")
+            developerConnection.set("scm:git:ssh://git@github.com/qadir0108/transynq-sdk-java.git")
+        }
+        issueManagement {
+            system.set("GitHub")
+            url.set("https://github.com/qadir0108/transynq-sdk-java/issues")
+        }
+    }
+}
+
+if (!signingKey.isNullOrBlank()) {
+    signing {
+        useInMemoryPgpKeys(signingKey, signingPassword ?: "")
     }
 }
