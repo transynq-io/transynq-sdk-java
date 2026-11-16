@@ -10,6 +10,7 @@
   <a href="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/ci.yml/badge.svg?branch=main"></a>
   <a href="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/release.yml"><img alt="Release" src="https://github.com/qadir0108/transynq-sdk-java/actions/workflows/release.yml/badge.svg"></a>
   <a href="https://central.sonatype.com/artifact/io.transynq/transynq-sdk"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.transynq/transynq-sdk?logo=apachemaven&color=2563EB"></a>
+  <a href="https://javadoc.io/doc/io.transynq/transynq-sdk"><img alt="Javadoc" src="https://javadoc.io/badge2/io.transynq/transynq-sdk/javadoc.svg?color=06B6D4"></a>
   <img alt="Runtime" src="https://img.shields.io/badge/java-17%2B-ED8B00?logo=openjdk&logoColor=white">
   <a href="https://github.com/qadir0108/transynq-sdk-java/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-8B5CF6"></a>
   <a href="https://github.com/qadir0108/transynq-sdk-java/tree/main/docs/"><img alt="Docs" src="https://img.shields.io/badge/docs-guides-2563EB"></a>
@@ -20,7 +21,7 @@ The official Java client for **Transynq TMS** (`/api/v1`): all 705 operations of
 bookings, dispatch, invoicing, customers, driver app...), with typed models, authentication, retries, typed errors, paging,
 optimistic concurrency, file transfer and long-running operations handled for you.
 
-- Package: `io.transynq:transynq-sdk` - version 1.0.0 (semantic versioning, independent of the API version)
+- Package: `io.transynq:transynq-sdk` - version 1.0.1 (semantic versioning, independent of the API version)
 - Generated from the Transynq API OpenAPI 3.1 contract v1.0.0 plus a hand-written core
 - Licence: [MIT](https://github.com/qadir0108/transynq-sdk-java/blob/main/LICENSE)
 
@@ -36,11 +37,11 @@ optimistic concurrency, file transfer and long-running operations handled for yo
 <dependency>
   <groupId>io.transynq</groupId>
   <artifactId>transynq-sdk</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 
 // Gradle (Kotlin DSL)
-implementation("io.transynq:transynq-sdk:1.0.0")
+implementation("io.transynq:transynq-sdk:1.0.1")
 ```
 
 ## Quick start

@@ -10,8 +10,8 @@ plugins {
 }
 
 group = "io.transynq"
-version = "1.0.0"
-description = "Official Java client for the Transynq TMS API"
+version = "1.0.1"
+description = "Transynq - Intelligent Transport Operations. Official Java SDK for the Transynq TMS API: a typed client for all 705 API operations with authentication, retries, typed errors, paging, ETag concurrency, file transfer and long-running operations."
 
 repositories {
     mavenCentral()
@@ -110,13 +110,13 @@ mavenPublishing {
     configure(JavaLibrary(javadocJar = JavadocJar.Javadoc(), sourcesJar = true))
 
     pom {
-        name.set("Transynq SDK")
+        name.set("Transynq Java SDK")
         description.set(project.description)
         inceptionYear.set("2026")
         url.set("https://github.com/qadir0108/transynq-sdk-java")
         organization {
             name.set("Transynq")
-            url.set("https://github.com/qadir0108/transynq-sdk-java")
+            url.set("https://transynq.io")
         }
         licenses {
             license {
@@ -129,7 +129,9 @@ mavenPublishing {
             developer {
                 id.set("transynq")
                 name.set("Transynq")
-                url.set("https://github.com/qadir0108")
+                url.set("https://transynq.io")
+                organization.set("Transynq")
+                organizationUrl.set("https://transynq.io")
             }
         }
         scm {
@@ -140,6 +142,10 @@ mavenPublishing {
         issueManagement {
             system.set("GitHub")
             url.set("https://github.com/qadir0108/transynq-sdk-java/issues")
+        }
+        ciManagement {
+            system.set("GitHub Actions")
+            url.set("https://github.com/qadir0108/transynq-sdk-java/actions")
         }
     }
 }

@@ -5,6 +5,13 @@ and the project uses [semantic versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-11-16
+
+### Changed
+
+- Richer Maven Central metadata: project name "Transynq Java SDK", a full description, organisation and developer links to https://transynq.io, and CI links.
+- Release workflow fails if Maven Central does not publish the version.
+
 ## [1.0.0] - 2026-11-16
 
 ### Added
@@ -19,5 +26,6 @@ and the project uses [semantic versioning](https://semver.org/).
 - Maven coordinates `io.transynq:transynq-sdk`, Java packages `io.transynq.sdk...`; requires Java 17 or later.
 - Transynq branding for README, docs and package metadata.
 
-[Unreleased]: https://github.com/qadir0108/transynq-sdk-java/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/qadir0108/transynq-sdk-java/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/qadir0108/transynq-sdk-java/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/qadir0108/transynq-sdk-java/releases/tag/v1.0.0
