@@ -93,3 +93,26 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
         run: ./gradlew publishAndReleaseToMavenCentral --no-daemon --no-configuration-cache
+
+      # The upload above returns as soon as Central accepts the bundle; validation (namespace, signatures, POM)
+      # happens afterwards. Wait for Central to report the version as published so a rejected deployment fails
+      # this job instead of looking green.
+      - name: Wait for Maven Central to publish
+        env:
+          MAVEN_CENTRAL_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          MAVEN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+        run: |
+          version="$(sed -n 's/^version = "\(.*\)"$/\1/p' build.gradle.kts)"
+          token="$(printf '%s:%s' "${MAVEN_CENTRAL_USERNAME}" "${MAVEN_CENTRAL_PASSWORD}" | base64 -w0)"
+          url="https://central.sonatype.com/api/v1/publisher/published?namespace=io.transynq&name=transynq-sdk&version=${version}"
+          for attempt in $(seq 1 60); do
+            published="$(curl -fsS -H "Authorization: Bearer ${token}" "${url}" | jq -r '.published' || echo error)"
+            echo "attempt ${attempt}: published=${published}"
+            if [ "${published}" = "true" ]; then
+              echo "io.transynq:transynq-sdk:${version} is published on Maven Central."
+              exit 0
+            fi
+            sleep 30
+          done
+          echo "::error::io.transynq:transynq-sdk:${version} was not published within 30 minutes. Check https://central.sonatype.com/publishing/deployments for the validation errors."
+          exit 1
