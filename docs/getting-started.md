@@ -7,11 +7,11 @@
 <dependency>
   <groupId>io.transynq</groupId>
   <artifactId>transynq-sdk</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
 </dependency>
 
 // Gradle (Kotlin DSL)
-implementation("io.transynq:transynq-sdk:1.0.1")
+implementation("io.transynq:transynq-sdk:1.0.2")
 ```
 
 ## 2. Get a credential

@@ -21,7 +21,7 @@ The official Java client for **Transynq TMS** (`/api/v1`): all 705 operations of
 bookings, dispatch, invoicing, customers, driver app...), with typed models, authentication, retries, typed errors, paging,
 optimistic concurrency, file transfer and long-running operations handled for you.
 
-- Package: `io.transynq:transynq-sdk` - version 1.0.1 (semantic versioning, independent of the API version)
+- Package: `io.transynq:transynq-sdk` - version 1.0.2 (semantic versioning, independent of the API version)
 - Generated from the Transynq API OpenAPI 3.1 contract v1.0.0 plus a hand-written core
 - Licence: [MIT](https://github.com/transynq-io/transynq-sdk-java/blob/main/LICENSE)
 
@@ -37,11 +37,11 @@ optimistic concurrency, file transfer and long-running operations handled for yo
 <dependency>
   <groupId>io.transynq</groupId>
   <artifactId>transynq-sdk</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
 </dependency>
 
 // Gradle (Kotlin DSL)
-implementation("io.transynq:transynq-sdk:1.0.1")
+implementation("io.transynq:transynq-sdk:1.0.2")
 ```
 
 ## Quick start

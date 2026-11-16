@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "io.transynq"
-version = "1.0.1"
+version = "1.0.2"
 description = "Transynq - Intelligent Transport Operations. Official Java SDK for the Transynq TMS API: a typed client for all 705 API operations with authentication, retries, typed errors, paging, ETag concurrency, file transfer and long-running operations."
 
 repositories {
