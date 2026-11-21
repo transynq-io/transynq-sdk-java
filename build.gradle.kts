@@ -11,7 +11,7 @@ plugins {
 
 group = "io.transynq"
 version = "1.0.2"
-description = "Transynq - Intelligent Transport Operations. Official Java SDK for the Transynq TMS API: a typed client for all 705 API operations with authentication, retries, typed errors, paging, ETag concurrency, file transfer and long-running operations."
+description = "Official Java SDK for Transynq TMS, the transport management system for carriers, fleet operators, 3PLs, brokers and shippers: bookings, dispatch, live tracking, driver POD, invoicing and costing through the Transynq API."
 
 repositories {
     mavenCentral()
@@ -54,7 +54,7 @@ tasks.withType<Javadoc>().configureEach {
         windowTitle = "Transynq Java SDK ${project.version}"
         docTitle = "Transynq Java SDK ${project.version}"
         header = "<img src=\"{@docRoot}/resources/brand/transynq-icon-32.png\" alt=\"Transynq\" width=\"20\" height=\"20\"> Transynq TMS"
-        bottom = "&copy; 2026 Transynq &middot; MIT licence &middot; Intelligent Transport Operations"
+        bottom = "&copy; 2026 <a href=\"https://transynq.io/\">Transynq</a> &middot; <a href=\"https://transynq.io/transport-management-system\">Transynq TMS - transport management system</a> &middot; MIT licence"
         addFileOption("-add-stylesheet", file("src/main/javadoc/transynq.css"))
     }
     isFailOnError = true
@@ -113,7 +113,7 @@ mavenPublishing {
         name.set("Transynq Java SDK")
         description.set(project.description)
         inceptionYear.set("2026")
-        url.set("https://github.com/transynq-io/transynq-sdk-java")
+        url.set("https://transynq.io/transport-management-system")
         organization {
             name.set("Transynq")
             url.set("https://transynq.io")
