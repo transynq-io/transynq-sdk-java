@@ -114,5 +114,7 @@ jobs:
             fi
             sleep 30
           done
-          echo "::error::io.transynq:transynq-sdk:${version} was not published within 30 minutes. Check https://central.sonatype.com/publishing/deployments for the validation errors."
-          exit 1
+          # Sonatype can take hours to publish a validated deployment, so a slow publish only warns.
+          # Do not re-run this job: a second upload of the same version is rejected as a duplicate.
+          echo "::warning::io.transynq:transynq-sdk:${version} was uploaded but is not on Maven Central after 30 minutes. Sonatype may still be publishing it; check https://central.sonatype.com/publishing/deployments for its status or validation errors. Do not re-run this job."
+          exit 0
