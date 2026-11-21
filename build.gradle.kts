@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "io.transynq"
-version = "1.0.2"
+version = "1.0.3"
 description = "Official Java SDK for Transynq TMS, the transport management system for carriers, fleet operators, 3PLs, brokers and shippers: bookings, dispatch, live tracking, driver POD, invoicing and costing through the Transynq API."
 
 repositories {
